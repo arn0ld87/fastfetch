@@ -1,0 +1,269 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    "logo": {
+        "type": "builtin",
+        "source": "Windows 95",
+        "padding": {
+            "top": 2,
+            "left": 2,
+            "right": 5
+        }
+    },
+
+    "display": {
+        "separator": "  ➜  ",
+
+        "color": {
+            "title": "#00D7FF",
+            "separator": "#6C7086",
+            "output": "#E6E9EF"
+        },
+
+        "key": {
+            "width": 17
+        },
+
+        "bar": {
+            "width": 14,
+            "char": {
+                "elapsed": "■",
+                "total": "·"
+            }
+        },
+
+        "percent": {
+            "type": 3,
+            "color": {
+                "green": "#00D787",
+                "yellow": "#FFD75F",
+                "red": "#FF5F5F"
+            }
+        }
+    },
+
+    "modules": [
+
+        // ─────────────────────────────────────────────
+        // HEADER
+        // ─────────────────────────────────────────────
+
+        {
+            "type": "title",
+            "keyColor": "#00D7FF"
+        },
+
+        {
+            "type": "custom",
+            "format": "\u001b[38;2;90;100;120m────────────────────────────────────────\u001b[0m"
+        },
+
+        {
+            "type": "break"
+        },
+
+        // ─────────────────────────────────────────────
+        // SYSTEM
+        // ─────────────────────────────────────────────
+
+        {
+            "type": "custom",
+            "format": "\u001b[1;38;2;255;95;95m── SYSTEM ──────────────────────────────\u001b[0m"
+        },
+
+        {
+            "type": "os",
+            "key": "OS",
+            "keyColor": "#FF5F5F"
+        },
+
+        {
+            "type": "host",
+            "key": "Host",
+            "keyColor": "#FF875F"
+        },
+
+        {
+            "type": "bios",
+            "key": "BIOS",
+            "keyColor": "#FFAF00"
+        },
+
+        {
+            "type": "board",
+            "key": "Mainboard",
+            "keyColor": "#FFD75F"
+        },
+
+        {
+            "type": "chassis",
+            "key": "Chassis",
+            "keyColor": "#D7FF5F"
+        },
+
+        {
+            "type": "kernel",
+            "key": "Kernel",
+            "keyColor": "#AFFF00"
+        },
+
+        {
+            "type": "uptime",
+            "key": "Uptime",
+            "keyColor": "#87FF5F"
+        },
+
+        {
+            "type": "break"
+        },
+
+        // ─────────────────────────────────────────────
+        // HARDWARE
+        // ─────────────────────────────────────────────
+
+        {
+            "type": "custom",
+            "format": "\u001b[1;38;2;0;215;175m── HARDWARE ────────────────────────────\u001b[0m"
+        },
+
+        {
+            "type": "cpu",
+            "key": "CPU",
+            "keyColor": "#5FFF87"
+        },
+
+        {
+            "type": "cpuusage",
+            "key": "CPU Last",
+            "keyColor": "#00D787"
+        },
+
+        {
+            "type": "gpu",
+            "key": "GPU",
+            "keyColor": "#00D7AF"
+        },
+
+        {
+            "type": "memory",
+            "key": "RAM",
+            "keyColor": "#00D7FF",
+
+            "percent": {
+                "type": 3,
+                "green": 50,
+                "yellow": 80
+            }
+        },
+
+        {
+            "type": "physicalmemory",
+            "key": "RAM-Modul",
+            "keyColor": "#5FAFFF"
+        },
+
+        {
+            "type": "swap",
+            "key": "Swap",
+            "keyColor": "#8787FF",
+
+            "percent": {
+                "type": 3,
+                "green": 30,
+                "yellow": 70
+            }
+        },
+
+        {
+            "type": "break"
+        },
+
+        // ─────────────────────────────────────────────
+        // STORAGE
+        // ─────────────────────────────────────────────
+
+        {
+            "type": "custom",
+            "format": "\u001b[1;38;2;175;135;255m── STORAGE ─────────────────────────────\u001b[0m"
+        },
+
+        {
+            "type": "disk",
+            "key": "Disk",
+            "folders": "/",
+            "keyColor": "#AF87FF"
+        },
+
+        {
+            "type": "diskio",
+            "key": "Disk I/O",
+            "keyColor": "#D787FF"
+        },
+
+        {
+            "type": "break"
+        },
+
+        // ─────────────────────────────────────────────
+        // NETWORK
+        // ─────────────────────────────────────────────
+
+        {
+            "type": "custom",
+            "format": "\u001b[1;38;2;255;95;175m── NETWORK ─────────────────────────────\u001b[0m"
+        },
+
+        {
+            "type": "localip",
+            "key": "IP",
+            "keyColor": "#FF87D7",
+            "format": "{ipv4} ({ifname})"
+        },
+
+        {
+            "type": "netio",
+            "key": "Net I/O",
+            "keyColor": "#FF5FAF"
+        },
+
+        {
+            "type": "publicip",
+            "key": "Public IP",
+            "keyColor": "#FF5F87"
+        },
+
+        {
+            "type": "break"
+        },
+
+        // ─────────────────────────────────────────────
+        // STATUS
+        // ─────────────────────────────────────────────
+
+        {
+            "type": "custom",
+            "format": "\u001b[1;38;2;255;175;0m── STATUS ──────────────────────────────\u001b[0m"
+        },
+
+        {
+            "type": "loadavg",
+            "key": "Load Average",
+            "keyColor": "#FFAF00"
+        },
+
+        {
+            "type": "processes",
+            "key": "Prozesse",
+            "keyColor": "#FFD75F"
+        },
+
+        {
+            "type": "break"
+        },
+
+        {
+            "type": "colors",
+            "symbol": "circle"
+        }
+    ]
+}
